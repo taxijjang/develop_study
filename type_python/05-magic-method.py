@@ -54,4 +54,11 @@ droid1.say_hi()
 print(dir(droid1))
 print(droid1)
 
+# __call__ 정의하지 않으면
+# droid1()
+# TypeError: 'Robot' object is not callable
+# droid1()은 callable하지 않아 호출이 불가능
+
+# __call__ 정의하면
+# 호출 가능함
 droid1()
