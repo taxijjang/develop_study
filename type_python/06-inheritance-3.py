@@ -71,6 +71,12 @@ class Robot:
 
 
 class Siri(Robot):
+    def __init__(self, name, code, age):
+        self.name = name
+        self.code = code
+        self.age = age
+        Siri.population += 1
+
     def call_me(self):
         print("네?")
 
@@ -81,12 +87,20 @@ class Siri(Robot):
     @classmethod
     def hello_apple(cls):
         print(f'{cls} hello apple!!')
-siri = Siri(name='siri', code=123123)
 
-siri.call_me()
+    # method overriding
+    def say_hi(self):
+        # code
+        print(f'Grettings. my masters call me {self.name}. by apple')
 
-print(siri.cal_mul(7, 8))
+    # 클래스 메서드
+    # method overriding
+    @classmethod
+    def how_many(cls):
+        return f'We have {cls.population}!. by apple'
 
-print(siri.a)
 
-Siri.hello_apple()
+siri = Siri(name='siri', code=123123, age=1)
+siri.say_hi()
+
+print(Siri.how_many())
