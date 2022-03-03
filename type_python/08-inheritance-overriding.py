@@ -8,9 +8,9 @@
 
 2. 자식 클래스에서 별도의 메서드나 속성을 추가할 수 있다.
 
-3. 메서드 오버라이딩 <<<
+3. 메서드 오버라이딩
 
-4. Super( )
+4. Super( ) <<<
 
 5. Python의 모든 클래스는 object 클래스를 상속한다. : 모든 것은 객체이다.
 
@@ -72,10 +72,8 @@ class Robot:
 
 class Siri(Robot):
     def __init__(self, name, code, age):
-        self.name = name
-        self.code = code
+        super().__init__(name, code)
         self.age = age
-        Siri.population += 1
 
     def call_me(self):
         print("네?")
@@ -83,6 +81,11 @@ class Siri(Robot):
     def cal_mul(self, a, b):
         self.a = a
         return a * b
+
+    def cal_flexable(self, a, b):
+        super().say_hi()
+        self.say_hi()
+        return self.cal_mul(a, b) * self.cal_add(a, b)
 
     @classmethod
     def hello_apple(cls):
@@ -104,3 +107,17 @@ siri = Siri(name='siri', code=123123, age=1)
 siri.say_hi()
 
 print(Siri.how_many())
+
+siri.cal_flexable(3, 4)
+
+"""
+python 2에서는 아래와 같이 명시적으로 선언 해줘야함
+
+class A:
+    def __init__(self):
+        ...
+
+class B(A):
+    def __init(self):
+        super(B, self).__init__()
+"""
