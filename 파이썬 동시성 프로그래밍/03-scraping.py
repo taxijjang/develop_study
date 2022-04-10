@@ -32,3 +32,9 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+print("작업 완료")
+
+
+
