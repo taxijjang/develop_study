@@ -1,9 +1,12 @@
+import asyncio
+
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
 from app.models import mongodb
 from app.models.book import BookModel
+from app.book_scraper import NaverBookScraper
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -14,8 +17,6 @@ templates = Jinja2Templates(directory=BASE_DIR / "templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    book = BookModel(keyword='파이썬', publisher='BJPublic', price=1200, image='me.png')
-    await mongodb.engine.save(book) # DB에 저장
     return templates.TemplateResponse(
         "./index.html",
         {"request": request, "title": "taxijjang"}
@@ -24,6 +25,20 @@ async def root(request: Request):
 
 @app.get("/search", response_class=HTMLResponse)
 async def search(request: Request, q: str):
+    keyword = q
+    naver_book_scraper = NaverBookScraper()
+    books = await naver_book_scraper.search(keyword=keyword, total_page=10)
+    book_models = []
+    for book in books:
+        book_model = BookModel(
+            keyword=keyword,
+            publisher=book.get('publisher'),
+            price=book.get('price'),
+            image=book.get('image'),
+        )
+        book_models.append(book_model)
+    await mongodb.engine.save_all(book_models)
+
     return templates.TemplateResponse(
         "./index.html",
         {"request": request, "title": "taxijjang", "keyword": q}
