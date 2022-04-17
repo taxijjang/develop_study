@@ -1,14 +1,66 @@
-# python_study
-### 파이썬 공부 및 코드를 작성하는 공간
+# 파이썬 공부한 내용을 작성하는 공간
+
+## 목차
+1. [도서](https://github.com/taxijjang/python_study/edit/master/README.md#%EB%8F%84%EC%84%9C)
+2. [강의](https://github.com/taxijjang/python_study/edit/master/README.md#%EA%B0%95%EC%9D%98)
+# 도서
+
+  * 읽은 책 - 📒
+
+  * 읽는 중 - 📖
+
+  * 추천도 - ⭐
+    * 책을 다 읽은 후에 매길 예정
 ---
 
-### 강의
-- [고수가 되는 파이썬](https://www.inflearn.com/course/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%99%84%EC%84%B1-%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90/dashboard)
-- [타입 파이썬!](https://www.inflearn.com/course/%ED%83%80%EC%9E%85-%ED%8C%8C%EC%9D%B4%EC%8D%AC/dashboard)
+  ### Language
+  #### python
+    파이썬 코딩의 기술 (개정 2판) - 📒, ⭐⭐⭐⭐⭐
+    * 완독 - 22.04.17
+    * python의 바이블이라는 이야기가 있는데 정말 인것 같다. 이 책을 모두 내껄로 흡수만 할 수 있다면 정말 수준 있는 python 개발자가 될 수 있을것 같다.
+    * 이 책은 한 번만 읽는게 아니라 두고두고 옆에 두고 계속 읽어야 될 것 같다.
+###
+    실전 스케일링 파이썬 프로그래밍 - 📖
+    * 책을 어느정도 읽은 후에 후기를 다시 남기도록 해야겠다. 
+###
+    파이썬으로 살펴보는 아키텍처 패턴 - 📒, ⭐⭐⭐⭐⭐
+    * 이전에 회사에서 클린 아키텍처 책 스터디를 진행 한 적이 있는데 처음 접해본 개념이라 python에서는 어떻게 적용해야되지? 라는 고민이 있었는데, 책을 보면서 어느정도 해소 되어가고 있다.
+###
+    Using Asyncio in Python(파이썬 비동기 라이브러리 Asyncio) - 📖
+    * 완독 - 
+    * 파이썬 동시성 강의를 듣고 있는데 Fastapi를 이용해서 토이 프로젝트를 진행하고 있는데 이때 Fastapi가 비동기 기반 프레임워크라 조금 더 심도있는 비동기를 알고 싶어 읽기 시작했다.
 
-### 책
-- [클린 파이썬](https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=348526954&gclid=CjwKCAjwloCSBhAeEiwA3hVo_SgRTy5iC2SHB_K0KvEZLDQsb57ViFGfCz8EhzOqdDjrLkH82lbzGhoCRo8QAvD_BwE)
-- [파이썬 클린 코드](https://www.coupang.com/vp/products/180913843?itemId=517809030&vendorItemId=4336757071&src=1042503&spec=10304982&addtag=400&ctag=180913843&lptag=10304982I517809030&itime=20220327210126&pageType=PRODUCT&pageValue=180913843&wPcid=16483824860505062233955&wRef=&wTime=20220327210126&redirect=landing&gclid=CjwKCAjwloCSBhAeEiwA3hVo_YPOMLxk0CSZliBcvLMo89tA4UKtDjH58T1x8cOc-VMUP4RaTLlsoBoC7SQQAvD_BwE&campaignid=12207438463&adgroupid=115720946583&isAddedCart=)
+  ### Computing Science
+  #### operating system
+    운영체제와 정보기술의 원리, 반효경 - 📒, ⭐⭐⭐⭐⭐
+    * 여러 운영체제 책의 내용은 이해하기가 조금 어려웠었는데 이 책을 보면서 어려운 부분은 이 책의 저자인 반효경 교수님의 강의도 들을 수 있어서 이해하는데 많은 도움이 됬습니다.
+
+  ### Infra
+  #### Server
+    NGINX Cookbook, 데릭 디용기 - 📖,
+    * 회사에서 Apache에서 Nginx로 전환하는 과정에서 읽게 된 책
+###
+    기초부터 다지는 ElasticSearch 운영 노하우, 박상헌, 강진우 - 📒, ⭐⭐⭐⭐ ( 회사에서는 aws opensearcch를 이용하는데 책의 내용은 뭔가 아쉬웠다 )
+    * 완독 - 22.02.19
+    * 회사에서 검색엔진 관련 이슈를 하면서 보게된 책 
+    * 대략적으로 ElasticSearch가 동작하는지 그리고 어떻게 운영을 해야되는지 알게되었다.
+    * 회사에서 user_word, stop_word, synonym_word를 운영하지 않고 있었는데 이 책을 동해 그리고 여러 지식을 습득하여 운영할 수 있도록 이슈를 생성했고, code 작성도 완료하게 되었다.
+
+###
+    가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 📖
+    * 완독 - 
+    * 회사에서 요즘들어 인프라쪽을 접하는 기회가 많아 산개되어 있는 지식을 정돈하고 싶어 보게된 책
+---
+
+  ### ETC
+    학교에서 알려주지 않는 17가지 실무 개발 기술, 한빛미디어 - 📒, ⭐⭐⭐⭐⭐
+    * 학교에서 애매하게 알고 있던 지식을 알려주기 때문에 기본적인 지식을 얻는데 도움이 됬습니다.
+    
+    
+  ### 강의
+  - [고수가 되는 파이썬](https://www.inflearn.com/course/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%99%84%EC%84%B1-%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90/dashboard)
+  - [타입 파이썬!](https://www.inflearn.com/course/%ED%83%80%EC%9E%85-%ED%8C%8C%EC%9D%B4%EC%8D%AC/dashboard)
+
 
 ### 컨퍼런스
 - pycorn
