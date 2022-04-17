@@ -26,22 +26,33 @@ async def root(request: Request):
 @app.get("/search", response_class=HTMLResponse)
 async def search(request: Request, q: str):
     keyword = q
-    naver_book_scraper = NaverBookScraper()
-    books = await naver_book_scraper.search(keyword=keyword, total_page=10)
-    book_models = []
-    for book in books:
-        book_model = BookModel(
-            keyword=keyword,
-            publisher=book.get('publisher'),
-            price=book.get('price'),
-            image=book.get('image'),
+
+    if not keyword:
+        context = {"request": request, "title": "콜렉터 북북이"}
+        return templates.TemplateResponse(
+            "./index.html",
+            context,
         )
-        book_models.append(book_model)
-    await mongodb.engine.save_all(book_models)
+
+    if await mongodb.engine.find_one(BookModel, BookModel.keyword == keyword):
+        books = await mongodb.engine.find(BookModel, BookModel.keyword == keyword)
+    else:
+        naver_book_scraper = NaverBookScraper()
+        books = await naver_book_scraper.search(keyword=keyword, total_page=10)
+        book_models = []
+        for book in books:
+            book_model = BookModel(
+                keyword=keyword,
+                publisher=book.get('publisher', ''),
+                price=book.get('price', 0),
+                image=book.get('image', ''),
+            )
+            book_models.append(book_model)
+        await mongodb.engine.save_all(book_models)
 
     return templates.TemplateResponse(
         "./index.html",
-        {"request": request, "title": "taxijjang", "keyword": q}
+        {"request": request, "title": "taxijjang", "books": books}
     )
 
 
