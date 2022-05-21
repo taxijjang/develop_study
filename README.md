@@ -2,7 +2,7 @@
 
 ## 목차
 1. [도서](https://github.com/taxijjang/develop_study/blob/master/README.md#%EB%8F%84%EC%84%9C)
-2. [강의](https://github.com/taxijjang/python_study/edit/master/README.md#%EA%B0%95%EC%9D%98)
+2. [강의](https://github.com/taxijjang/develop_study/blob/master/README.md#%EB%8F%84%EC%84%9C)
 # 도서
 
   * 읽은 책 - 📒
