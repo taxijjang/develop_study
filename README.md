@@ -2,7 +2,7 @@
 
 ## 목차
 1. [도서](https://github.com/taxijjang/develop_study/blob/master/README.md#%EB%8F%84%EC%84%9C)
-2. [강의](https://github.com/taxijjang/develop_study/blob/master/README.md#%EB%8F%84%EC%84%9C)
+2. [강의](https://github.com/taxijjang/develop_study/blob/master/README.md#%EA%B0%95%EC%9D%98)
 # 도서
 
   * 읽은 책 - 📒
@@ -60,7 +60,7 @@
   ### 강의
   - [고수가 되는 파이썬](https://www.inflearn.com/course/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%99%84%EC%84%B1-%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90/dashboard)
   - [타입 파이썬!](https://www.inflearn.com/course/%ED%83%80%EC%9E%85-%ED%8C%8C%EC%9D%B4%EC%8D%AC/dashboard)
-
+  - [소프트웨어 아키텍처 및 대규모 시스템 설계](https://www.udemy.com/course/software-architecture-design-large-scale-systems/) - 22.05.21
 
 ### 컨퍼런스
 - pycorn
