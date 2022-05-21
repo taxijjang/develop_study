@@ -1,4 +1,4 @@
-# 파이썬 공부한 내용을 작성하는 공간
+# 개발에 필요한 공부 내용을 작성하는 공간
 
 ## 목차
 1. [도서](https://github.com/taxijjang/python_study/edit/master/README.md#%EB%8F%84%EC%84%9C)
